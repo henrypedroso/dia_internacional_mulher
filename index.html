@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homenagem Dia da Mulher - NRE Guarapuava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top right, #2d1b4d, #1a1a2e);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #e2e8f0;
+        }
+
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .card-container {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+            max-width: 700px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-header {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: #a78bfa;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .floating-flower {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.15;
+            filter: grayscale(0.5);
+            pointer-events: none;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #8b5cf6, #d946ef);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.4);
+        }
+
+        @media print {
+            .no-print { display: none; }
+            body { background: white; color: black; }
+            .card-container { border: 2px solid #ddd; box-shadow: none; background: white; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flores flutuantes decorativas (SVG) -->
+    <svg class="floating-flower top-10 right-10" width="150" height="150" viewBox="0 0 100 100">
+        <path fill="#d946ef" d="M50 0C55 20 75 25 75 50S55 80 50 100C45 80 25 75 25 50S45 20 50 0Z" />
+    </svg>
+    <svg class="floating-flower bottom-10 left-10" width="100" height="100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="10 5" />
+    </svg>
+
+    <div class="card-container" id="card">
+        <div class="card-header">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+            <span class="ml-4 text-xs font-mono text-slate-400">homenagem_professora.py</span>
+        </div>
+
+        <div class="p-8 md:p-12">
+            <div class="mb-6">
+                <span class="text-purple-400 font-mono text-sm"># Dia Internacional da Mulher</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-2 glow-text bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
+                    NRE Guarapuava
+                </h1>
+            </div>
+
+            <div class="space-y-6 text-slate-200">
+                <p class="text-lg leading-relaxed">
+                    Às nossas admiráveis <span class="text-pink-400 font-semibold">Professoras de Programação</span>,
+                </p>
+
+                <div class="bg-black/30 p-6 rounded-xl border border-white/5 font-mono text-sm md:text-base leading-loose">
+                    <span class="text-blue-400">def</span> <span class="text-yellow-300">celebrar_talento</span>(mulher):<br>
+                    &nbsp;&nbsp;<span class="text-slate-400 italic">""" Uma homenagem especial """</span><br>
+                    &nbsp;&nbsp;print(<span class="text-green-300">"Transformando o mundo através da educação"</span>)<br>
+                    <br>
+                    <span class="text-purple-400">class</span> <span class="text-yellow-300">InclusaoDigital</span>:<br>
+                    &nbsp;&nbsp;<span class="text-slate-300">"O empoderamento feminino é a chave para o acesso universal."</span>
+                </div>
+
+                <p class="text-xl md:text-2xl font-light italic border-l-4 border-pink-500 pl-6 my-8">
+                    "Onde há uma mulher ensinando a programar, existe um algoritmo de mudança social compilando um futuro onde a tecnologia é a maior ferramenta de inclusão para nossos estudantes."
+                </p>
+
+                <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div>
+                        <p class="text-sm text-slate-400 uppercase tracking-widest">Compilado em:</p>
+                        <p class="font-bold text-pink-400">8 de Março</p>
+                    </div>
+                    <div class="text-right hidden md:block">
+                        <p class="text-xs text-slate-500 font-mono">Status: Success</p>
+                        <p class="text-xs text-slate-500 font-mono">Impact: Infinite</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de ação (não aparece na impressão) -->
+    <div class="fixed bottom-6 right-6 no-print">
+        <button onclick="window.print()" class="btn-gradient px-6 py-3 rounded-full font-bold text-white shadow-lg flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Salvar / Imprimir
+        </button>
+    </div>
+
+</body>
+</html>
